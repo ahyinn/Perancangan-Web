@@ -106,8 +106,6 @@ header {
 }
 .nav-links a:hover, .nav-links a.active { color: var(--primary); background: rgba(0,109,119,.08); }
 .nav-right { display: flex; align-items: center; gap: .6rem; flex-shrink: 0; }
-
-/* User chip (setelah login) */
 .user-chip {
   display: none; align-items: center; gap: .45rem;
   background: rgba(0,109,119,.08); border-radius: 99px;
@@ -136,8 +134,6 @@ header {
   display: none; white-space: nowrap;
 }
 .btn-logout-nav:hover { border-color: var(--accent2); color: var(--accent2); }
-
-/* Hamburger */
 .hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; flex-shrink: 0; }
 .hamburger span {
   display: block; width: 22px; height: 2px;
@@ -146,8 +142,6 @@ header {
 .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
-
-/* Mobile menu */
 .mobile-menu {
   display: none; position: fixed;
   top: var(--nav-h); left: 0; right: 0; bottom: 0;
@@ -183,7 +177,7 @@ header {
 }
 
 /* ================================================================
-   HERO SLIDER — infinite seamless
+   HERO SLIDER
    ================================================================ */
 .hero {
   position: relative; height: clamp(320px,56vw,580px);
@@ -195,11 +189,7 @@ header {
   min-width: 100%; height: 100%; position: relative; flex-shrink: 0;
   display: flex; align-items: flex-end;
 }
-/* Gambar hero slider — background-size cover */
-.hero-slide img {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%; object-fit: cover;
-}
+.hero-slide img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-slide::before {
   content: ''; position: absolute; inset: 0; z-index: 1;
   background: linear-gradient(to top, rgba(13,43,46,.85) 0%, rgba(13,43,46,.3) 50%, transparent 100%);
@@ -265,7 +255,7 @@ header {
 .section-header .section-sub { margin-left: auto; margin-right: auto; }
 
 /* ================================================================
-   INTRO SECTION (Beranda)
+   INTRO SECTION
    ================================================================ */
 .intro-section {
   background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
@@ -303,8 +293,6 @@ header {
   display: flex; flex-direction: column;
 }
 .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-
-/* Thumbnail card — menampilkan foto[0] dari array wisata */
 .card-thumb {
   width: 100%; height: clamp(160px,20vw,210px);
   background: linear-gradient(135deg, var(--secondary), var(--primary));
@@ -312,14 +300,11 @@ header {
   font-size: clamp(2.5rem,5vw,3.5rem); flex-shrink: 0;
   overflow: hidden; position: relative;
 }
-/* img di dalam card-thumb mengisi penuh dengan object-fit:cover */
 .card-thumb img {
   position: absolute; top: 0; left: 0; right: 0; bottom: 0;
   width: 100%; height: 100%; object-fit: cover; display: block;
 }
-/* Fallback emoji jika foto tidak ada */
 .card-thumb .thumb-emoji { position: relative; z-index: 1; }
-
 .card-body { padding: 1.1rem 1.1rem .6rem; flex: 1; }
 .card-cat { display: inline-block; padding: .2rem .7rem; border-radius: 99px; font-size: .72rem; font-weight: 700; margin-bottom: .45rem; }
 .cat-sejarah  { background: #FFF3E0; color: #E65100; }
@@ -435,8 +420,6 @@ header {
 .btn-back:hover { border-color: var(--primary); color: var(--primary); }
 .detail-body { max-width: 1280px; margin: 0 auto; padding: 1.25rem clamp(1rem,3vw,1.75rem) 3rem; }
 .detail-grid { display: grid; grid-template-columns: 1fr 360px; gap: clamp(1.25rem,3vw,2.25rem); align-items: start; }
-
-/* Gallery detail */
 .gallery { border-radius: var(--r); overflow: hidden; background: var(--dark); position: relative; }
 .gallery-main {
   position: relative; height: clamp(220px,40vw,400px);
@@ -449,7 +432,6 @@ header {
   display: flex; align-items: center; justify-content: center;
   font-size: clamp(3rem,8vw,5rem);
 }
-/* img di dalam gallery-slide mengisi penuh */
 .gallery-slide img { width: 100%; height: 100%; object-fit: cover; }
 .gallery-ctr {
   position: absolute; bottom: .75rem; right: .75rem;
@@ -470,8 +452,6 @@ header {
   cursor: pointer; pointer-events: all; transition: var(--tr);
 }
 .gbtn:hover { background: rgba(255,255,255,.35); }
-
-/* Info card detail */
 .info-card { background: var(--white); border-radius: var(--r); box-shadow: var(--shadow); overflow: hidden; }
 .info-card-head { background: linear-gradient(135deg, var(--primary), var(--dark)); padding: 1.5rem; }
 .info-card-head h1 {
@@ -491,7 +471,6 @@ header {
 .info-icon { font-size: 1.15rem; flex-shrink: 0; margin-top: .1rem; }
 .info-lbl { font-size: .7rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
 .info-val { font-size: .88rem; color: var(--text); font-weight: 500; margin-top: .12rem; }
-
 .desc-card { margin-top: 1.25rem; background: var(--white); border-radius: var(--r); padding: 1.4rem; box-shadow: var(--shadow); }
 .desc-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: .65rem; color: var(--dark); }
 .desc-card p { color: var(--muted); line-height: 1.8; font-size: .9rem; }
@@ -564,7 +543,7 @@ header {
 .about-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.75rem,5vw,3rem); font-weight: 900; color: #fff; margin-bottom: .65rem; }
 .about-hero p { color: rgba(255,255,255,.72); font-size: clamp(.85rem,2vw,1rem); max-width: 520px; margin: 0 auto; }
 .about-body { max-width: 1280px; margin: 0 auto; padding: clamp(2rem,5vw,4rem) clamp(1rem,3vw,1.75rem); }
-.about-intro { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem,4vw,3rem); align-items: center; margin-bottom: clamp(2rem,5vw,4rem); }
+.about-intro { display: block; text-align: center; margin-bottom: clamp(2rem,5vw,4rem); }
 .about-intro-txt h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem,3vw,2rem); font-weight: 900; color: var(--dark); margin-bottom: .85rem; }
 .about-intro-txt p { color: var(--muted); line-height: 1.8; font-size: .92rem; }
 .about-intro-txt p + p { margin-top: .75rem; }
@@ -583,12 +562,6 @@ header {
 .team-h { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem,3vw,2rem); font-weight: 900; color: var(--dark); text-align: center; margin-bottom: clamp(1.25rem,3vw,2rem); }
 .team-card { background: var(--white); border-radius: var(--r); padding: clamp(1.25rem,3vw,2rem); text-align: center; box-shadow: var(--shadow); transition: var(--tr); }
 .team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.team-av {
-  width: 72px; height: 72px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--secondary), var(--primary));
-  margin: 0 auto .85rem; display: flex; align-items: center; justify-content: center;
-  font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: #fff;
-}
 .team-name { font-family: 'Playfair Display', serif; font-size: .95rem; font-weight: 700; color: var(--dark); }
 .team-nim { font-size: .78rem; color: var(--muted); margin-top: .2rem; }
 .team-role { display: inline-block; margin-top: .65rem; padding: .22rem .75rem; border-radius: 99px; background: rgba(0,109,119,.08); color: var(--primary); font-size: .75rem; font-weight: 600; }

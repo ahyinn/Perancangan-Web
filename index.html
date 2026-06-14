@@ -5,18 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>CatchyPinang — Wisata Tanjungpinang</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet">
-
-<!-- CSS -->
 <link rel="stylesheet" href="style.css">
 
-<!-- Firebase SDK (module) — harus di <head> agar siap sebelum script.js berjalan -->
 <script type="module">
-  import { initializeApp } 
-    from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-  import { getDatabase, ref, push, onValue, serverTimestamp }
-    from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+  import { getDatabase, ref, push, onValue, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
   const firebaseConfig = {
     apiKey:            "AIzaSyAipQK31IWfMb88ezSBENCaFQwXt-dm8TU",
@@ -31,7 +25,6 @@
   const app = initializeApp(firebaseConfig);
   const db  = getDatabase(app);
 
-  /* Expose ke global agar script.js (non-module) bisa akses */
   window._fbDb        = db;
   window._fbRef       = ref;
   window._fbPush      = push;
@@ -44,20 +37,13 @@
 </head>
 <body>
 
-<!-- =====================================================
-     LOADING SCREEN
-     ===================================================== -->
 <div id="loading-screen">
   <div class="load-logo">Catchy<span>Pinang</span></div>
   <div class="load-bar"><div class="load-bar-fill"></div></div>
 </div>
 
-<!-- TOAST NOTIFICATION -->
 <div id="toast"></div>
 
-<!-- =====================================================
-     LOGIN MODAL
-     ===================================================== -->
 <div class="modal-ov" id="loginModal">
   <div class="modal">
     <div class="modal-head">
@@ -68,11 +54,10 @@
       <button class="mtab active" onclick="switchTab('login')">Masuk</button>
       <button class="mtab"        onclick="switchTab('register')">Daftar</button>
     </div>
-    <!-- Form Masuk -->
     <div class="mform active" id="form-login">
       <div class="fg">
         <label>Nama</label>
-        <input type="text"  class="fi" id="ln-name"  placeholder="Nama kamu">
+        <input type="text" class="fi" id="ln-name" placeholder="Nama kamu">
         <div class="err" id="err-ln">Nama wajib diisi</div>
       </div>
       <div class="fg">
@@ -82,11 +67,10 @@
       </div>
       <button class="btn-send" onclick="doLogin()">Masuk</button>
     </div>
-    <!-- Form Daftar -->
     <div class="mform" id="form-register">
       <div class="fg">
         <label>Nama Lengkap</label>
-        <input type="text"  class="fi" id="rg-name"  placeholder="Nama lengkap">
+        <input type="text" class="fi" id="rg-name" placeholder="Nama lengkap">
         <div class="err" id="err-rn">Nama wajib diisi</div>
       </div>
       <div class="fg">
@@ -100,22 +84,15 @@
   </div>
 </div>
 
-<!-- =====================================================
-     HEADER & NAVIGASI
-     ===================================================== -->
 <header>
   <div class="nav-inner">
     <div class="nav-logo" onclick="showPage('beranda')">Catchy<span>Pinang</span></div>
-
-    <!-- Nav desktop -->
     <ul class="nav-links">
       <li><a onclick="showPage('beranda')" id="nav-beranda" class="active">Beranda</a></li>
       <li><a onclick="showPage('katalog')" id="nav-katalog">Katalog</a></li>
       <li><a onclick="showPage('about')"   id="nav-about">Tentang Kami</a></li>
       <li><a onclick="showPage('contact')" id="nav-contact">Kontak</a></li>
     </ul>
-
-    <!-- Auth buttons -->
     <div class="nav-right">
       <div class="user-chip" id="userChip">
         <div class="av" id="userAv">?</div>
@@ -124,17 +101,12 @@
       <button class="btn-logout-nav" id="btnLogout" onclick="doLogout()">Keluar</button>
       <button class="btn-login-nav"  id="btnLogin"  onclick="openModal()">Masuk</button>
     </div>
-
-    <!-- Hamburger mobile -->
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Buka menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 
-<!-- =====================================================
-     MOBILE MENU
-     ===================================================== -->
 <div class="mobile-menu" id="mobileMenu">
   <div class="mobile-menu-user" id="mMobUser">
     <div class="mu-name"  id="mMobName"></div>
@@ -149,12 +121,7 @@
   <a onclick="doLogout();closeMenu()"  id="mnav-logout" style="color:#E29578;display:none">🚪 Keluar</a>
 </div>
 
-<!-- =====================================================
-     HALAMAN BERANDA
-     ===================================================== -->
 <div class="page active" id="page-beranda">
-
-  <!-- Hero Slider -->
   <div class="hero" id="hero">
     <div class="hero-track" id="hTrack"></div>
     <div class="hero-arrows">
@@ -164,7 +131,6 @@
     <div class="hero-dots" id="heroDots"></div>
   </div>
 
-  <!-- Intro / About singkat -->
   <div class="intro-section">
     <div class="intro-grid">
       <div class="intro-text">
@@ -181,7 +147,6 @@
     </div>
   </div>
 
-  <!-- Destinasi Unggulan -->
   <section class="section">
     <div class="container">
       <div class="section-header">
@@ -189,7 +154,6 @@
         <h2 class="section-title">Destinasi Unggulan</h2>
         <p class="section-sub">Tiga destinasi terbaik yang wajib kamu kunjungi</p>
       </div>
-      <!-- Card diisi oleh renderBeranda() di script.js -->
       <div class="grid-3" id="berandaGrid"></div>
       <div style="text-align:center;margin-top:2rem">
         <button class="btn-cta" style="background:var(--primary);color:#fff" onclick="showPage('katalog')">
@@ -199,7 +163,6 @@
     </div>
   </section>
 
-  <!-- CTA Banner -->
   <section class="section" style="padding-top:0">
     <div class="container">
       <div class="cta-banner">
@@ -213,16 +176,11 @@
   </section>
 </div>
 
-<!-- =====================================================
-     HALAMAN KATALOG
-     ===================================================== -->
 <div class="page" id="page-katalog">
   <div class="katalog-hero">
     <h1>Katalog Wisata Tanjungpinang</h1>
     <p>Temukan destinasi wisata terbaik dari 5 kategori pilihan</p>
   </div>
-
-  <!-- Filter & Search -->
   <div class="katalog-controls">
     <div class="katalog-controls-inner">
       <div class="search-box">
@@ -239,8 +197,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Grid katalog — diisi oleh renderKatalog() -->
   <div class="katalog-body">
     <div class="grid-3" id="katalogGrid"></div>
     <div id="noResult" class="no-result" style="display:none">
@@ -253,20 +209,13 @@
   </div>
 </div>
 
-<!-- =====================================================
-     HALAMAN DETAIL WISATA
-     ===================================================== -->
 <div class="page" id="page-detail">
   <div class="detail-back-bar">
     <button class="btn-back" onclick="backToKatalog()">← Kembali ke Katalog</button>
   </div>
-
   <div class="detail-body">
     <div class="detail-grid">
-
-      <!-- Kolom kiri: Gallery + Deskripsi + Ulasan -->
       <div>
-        <!-- Gallery slider foto — diisi oleh buildGallery() -->
         <div class="gallery">
           <div class="gallery-main" id="galleryMain">
             <div class="gallery-track" id="galTrack"></div>
@@ -277,8 +226,6 @@
             <div class="gallery-ctr" id="galCtr">1 / 1</div>
           </div>
         </div>
-
-        <!-- Deskripsi & Fasilitas -->
         <div class="desc-card">
           <h3>Tentang Tempat Ini</h3>
           <p id="detailDesc"></p>
@@ -287,8 +234,6 @@
             <div class="fac-list" id="detailFac"></div>
           </div>
         </div>
-
-        <!-- Ulasan -->
         <div class="reviews-section">
           <h3>⭐ Ulasan Pengunjung</h3>
           <div id="reviewFormWrap"></div>
@@ -297,8 +242,6 @@
           <div class="rev-empty" id="revEmpty" style="display:none">Belum ada ulasan. Jadilah yang pertama! 🌟</div>
         </div>
       </div>
-
-      <!-- Kolom kanan: Info card + Peta -->
       <div>
         <div class="info-card">
           <div class="info-card-head">
@@ -315,14 +258,10 @@
         </div>
         <div class="map-wrap"><div id="dMap"></div></div>
       </div>
-
     </div>
   </div>
 </div>
 
-<!-- =====================================================
-     HALAMAN TENTANG KAMI
-     ===================================================== -->
 <div class="page" id="page-about">
   <div class="about-hero">
     <div class="section-label" style="color:var(--secondary)">Mengenal Kami</div>
@@ -337,10 +276,8 @@
         <p>CatchyPinang adalah website rekomendasi wisata berbasis web yang dirancang untuk membantu wisatawan lokal maupun mancanegara menemukan destinasi wisata terbaik di Kota Tanjungpinang dan Kabupaten Bintan.</p>
         <p>Dikembangkan menggunakan HTML5, CSS3, dan JavaScript Vanilla, platform ini menyajikan 11 destinasi wisata dari lima kategori dalam satu platform digital yang terbuka dan mudah diakses siapa saja tanpa perlu login, kecuali untuk fitur ulasan.</p>
       </div>
-      <div class="about-visual">🌴</div>
     </div>
 
-    <!-- Visi & Misi -->
     <div class="vm-grid">
       <div class="vm-card">
         <div class="vm-icon">🎯</div>
@@ -357,19 +294,19 @@
     <!-- Tim Pengembang -->
     <div>
       <h2 class="team-h">Tim Pengembang</h2>
-      <div class="grid-3 team-grid" style="margin-bottom:clamp(2rem,5vw,4rem)">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:clamp(2rem,5vw,4rem)">
         <div class="team-card">
-          <div class="team-av">JP</div>
+          <img src="image/juan.jpeg" style="width:90px;height:90px;border-radius:50%;object-fit:cover;margin:0 auto .85rem;display:block;border:3px solid var(--primary)">
           <div class="team-name">Juan Prattycha Tazira</div>
           <div class="team-nim">2401020005</div>
         </div>
         <div class="team-card">
-          <div class="team-av">MF</div>
+          <img src="image/fadhila.jpeg" style="width:90px;height:90px;border-radius:50%;object-fit:cover;margin:0 auto .85rem;display:block;border:3px solid var(--primary)">
           <div class="team-name">Muhammad Fadhila Arifin</div>
           <div class="team-nim">2401020012</div>
         </div>
         <div class="team-card">
-          <div class="team-av">RK</div>
+          <img src="image/rashika.jpeg" style="width:90px;height:90px;border-radius:50%;object-fit:cover;margin:0 auto .85rem;display:block;border:3px solid var(--primary)">
           <div class="team-name">Rashika Kasih Putri</div>
           <div class="team-nim">2401020017</div>
         </div>
@@ -384,18 +321,13 @@
   </div>
 </div>
 
-<!-- =====================================================
-     HALAMAN KONTAK
-     ===================================================== -->
 <div class="page" id="page-contact">
   <div class="contact-hero">
     <h1>Hubungi Kami</h1>
     <p>Ada masalah atau pertanyaan? Kami siap membantu kamu</p>
   </div>
-
   <div class="contact-body">
     <div class="contact-grid">
-      <!-- Info kontak -->
       <div class="contact-info">
         <h3>Informasi Kontak</h3>
         <div class="c-item"><div class="c-icon">📧</div><div><div class="c-lbl">Email</div><div class="c-val">catchypinang@umrah.ac.id</div></div></div>
@@ -403,13 +335,12 @@
         <div class="c-item"><div class="c-icon">📱</div><div><div class="c-lbl">WhatsApp</div><div class="c-val">+62 812-3456-7890</div></div></div>
         <div class="c-item"><div class="c-icon">🕐</div><div><div class="c-lbl">Jam Respons</div><div class="c-val">Senin–Jumat, 08.00–17.00 WIB</div></div></div>
       </div>
-      <!-- Form kontak -->
       <div class="form-card">
         <h3>Kirim Pesan</h3>
         <div class="form-row2">
           <div class="fg">
             <label>Nama *</label>
-            <input type="text"  class="fi" id="cNama"  placeholder="Nama kamu">
+            <input type="text" class="fi" id="cNama" placeholder="Nama kamu">
             <div class="err" id="ecNama">Nama wajib diisi</div>
           </div>
           <div class="fg">
@@ -439,9 +370,6 @@
   </div>
 </div>
 
-<!-- =====================================================
-     FOOTER
-     ===================================================== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-grid">
@@ -475,9 +403,6 @@
   </div>
 </footer>
 
-<!-- =====================================================
-     JAVASCRIPT — load terakhir agar DOM sudah siap
-     ===================================================== -->
 <script src="script.js"></script>
 
 </body>
