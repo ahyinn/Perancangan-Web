@@ -184,8 +184,6 @@ let wisata = [
 
 /* ===========================================================
    HERO SLIDER — array foto & teks per slide
-   FIX: Tambah wisataId di setiap slide agar tombol "Jelajahi
-   Sekarang" membuka detail wisata yang sesuai.
    =========================================================== */
 const heroSlides = [
   {
@@ -193,29 +191,27 @@ const heroSlides = [
     badge: "Destinasi Unggulan",
     title: "Pulau Penyengat,<br>Permata Melayu",
     desc: "Jelajahi pulau bersejarah warisan budaya Melayu dan arsitektur megah Kerajaan Riau-Lingga.",
-    wisataId: 1  // FIX: id wisata Pulau Penyengat
+    wisataId: 1
   },
   {
     img: "image/trikora1.jpeg",
     badge: "Wisata Alam",
     title: "Pantai Trikora,<br>Surga Tersembunyi",
     desc: "Rasakan keindahan pantai pasir putih dengan air biru jernih di tepian Pulau Bintan.",
-    wisataId: 2  // FIX: id wisata Pantai Trikora
+    wisataId: 2
   },
   {
     img: "image/bintan street food 1.jpg",
     badge: "Wisata Kuliner",
     title: "Cita Rasa Melayu<br>yang Autentik",
     desc: "Nikmati pengalaman kuliner lokal Tanjungpinang kaya akan bumbu dan tradisi turun-temurun.",
-    wisataId: 8  // FIX: id wisata Kawasan Kuliner Bincen
+    wisataId: 8
   }
 ];
 
 
 /* ===========================================================
    FIREBASE — WISATA REALTIME LISTENER
-   Sinkronisasi data wisata dari Firebase secara realtime.
-   Perubahan dari Admin Panel akan langsung terlihat di sini.
    =========================================================== */
 function startWisataListener() {
   if (!isFbReady()) return;
@@ -230,7 +226,6 @@ function startWisataListener() {
         fromDb.forEach(w => wisata.push(w));
       }
     }
-    // Re-render halaman yang sedang aktif
     if (curPage === "katalog") renderKatalog();
     if (curPage === "beranda") renderBeranda();
     if (curPage === "detail" && curWisata) {
@@ -393,8 +388,6 @@ function toast(msg) {
 
 /* ===========================================================
    HERO SLIDER — infinite seamless
-   FIX: Tombol "Jelajahi Sekarang" menggunakan s.wisataId
-   dan event.stopPropagation() untuk mencegah event bubbling.
    =========================================================== */
 function buildHeroSlider() {
   const track = document.getElementById("hTrack");
@@ -604,7 +597,7 @@ function cardHTML(w, prefix = "") {
     <div class="card-foot">
       <div class="card-rating" id="cr-${prefix}${w.id}">${
         avg
-          ? `${avg}`
+          ? `⭐ ${avg}`
           : `<span style="color:var(--muted);font-weight:400;font-size:.78rem">Belum ada ulasan</span>`
       }</div>
       <button class="btn-detail">Lihat Detail</button>
@@ -614,11 +607,8 @@ function cardHTML(w, prefix = "") {
 
 /* ===========================================================
    BERANDA
-   FIX: Cari wisata by ID eksplisit (bukan index array)
-   agar tidak salah jika urutan array berubah.
    =========================================================== */
 function renderBeranda() {
-  // FIX: gunakan .find() by id, bukan wisata[index]
   const unggulan = [1, 2, 11].map(id => wisata.find(w => w.id === id)).filter(Boolean);
   document.getElementById("berandaGrid").innerHTML = unggulan.map(w => cardHTML(w, "b-")).join("");
   if (isFbReady()) unggulan.forEach(w => fbGetAvg(w.id).then(avg => {
@@ -651,7 +641,7 @@ function renderKatalog() {
   if (isFbReady()) f.slice(0, shown).forEach(w => fbGetAvg(w.id).then(avg => {
     const el = document.getElementById("cr-k-"+w.id);
     if (el) el.innerHTML = avg
-      ? `${avg}`
+      ? `⭐ ${avg}`
       : `<span style="color:var(--muted);font-weight:400;font-size:.78rem">Belum ada ulasan</span>`;
   }));
 }
@@ -686,7 +676,7 @@ function showDetail(id) {
   rEl.innerHTML = "<span>—</span><span>Memuat...</span>";
   if (isFbReady()) fbGetAvg(w.id).then(avg => {
     rEl.innerHTML = avg
-      ? `<span style="color:#FBBF24">${avg}</span><span>rata-rata</span>`
+      ? `<span style="color:#FBBF24">⭐ ${avg}</span><span>rata-rata</span>`
       : "<span>—</span><span>Belum ada ulasan</span>";
   });
 
@@ -736,7 +726,7 @@ async function submitReview(wisataId) {
   };
   if (isFbReady()) {
     const ok = await fbSaveReview(wisataId, rev);
-    if (!ok) { toast("❌ Gagal menyimpan. Cek koneksi atau Firebase config."); return; }
+    if (!ok) { toast("Gagal menyimpan. Cek koneksi atau Firebase config."); return; }
   } else {
     lsSaveReview(wisataId, rev);
   }
@@ -758,7 +748,7 @@ function loadRevsList(wisataId) {
       empty.style.display = "none";
       list.innerHTML = reviews.map(revHTML).join("");
       const avg = (reviews.reduce((s,x) => s+x.rating, 0) / reviews.length).toFixed(1);
-      document.getElementById("dRating").innerHTML = `<span style="color:#FBBF24"> ${avg}</span><span>(${reviews.length} ulasan)</span>`;
+      document.getElementById("dRating").innerHTML = `<span style="color:#FBBF24">⭐ ${avg}</span><span>(${reviews.length} ulasan)</span>`;
     });
   } else {
     loading.style.display = "none";
@@ -767,7 +757,7 @@ function loadRevsList(wisataId) {
     empty.style.display = "none";
     list.innerHTML = reviews.map(revHTML).join("");
     const avg = lsAvg(wisataId);
-    if (avg) document.getElementById("dRating").innerHTML = `<span style="color:#FBBF24"> ${avg}</span><span>(${reviews.length} ulasan)</span>`;
+    if (avg) document.getElementById("dRating").innerHTML = `<span style="color:#FBBF24">⭐ ${avg}</span><span>(${reviews.length} ulasan)</span>`;
   }
 }
 
