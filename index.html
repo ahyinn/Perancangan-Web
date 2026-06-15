@@ -47,7 +47,7 @@
 <div class="modal-ov" id="loginModal">
   <div class="modal">
     <div class="modal-head">
-      <h2>Selamat Datang 👋</h2>
+      <h2>Selamat Datang</h2>
       <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
     <div class="mtabs">
@@ -80,7 +80,7 @@
       </div>
       <button class="btn-send" onclick="doRegister()">Daftar &amp; Masuk</button>
     </div>
-    <div class="modal-foot">Platform wisata Tanjungpinang 🌴</div>
+    <div class="modal-foot">Platform wisata Tanjungpinang</div>
   </div>
 </div>
 
@@ -112,13 +112,13 @@
     <div class="mu-name"  id="mMobName"></div>
     <div class="mu-email" id="mMobEmail"></div>
   </div>
-  <a onclick="goPage('beranda')" id="mnav-beranda" class="active">🏠 Beranda</a>
-  <a onclick="goPage('katalog')" id="mnav-katalog">🗺️ Katalog</a>
-  <a onclick="goPage('about')"   id="mnav-about">ℹ️ Tentang Kami</a>
-  <a onclick="goPage('contact')" id="mnav-contact">📬 Kontak</a>
+  <a onclick="goPage('beranda')" id="mnav-beranda" class="active"> Beranda</a>
+  <a onclick="goPage('katalog')" id="mnav-katalog"> Katalog</a>
+  <a onclick="goPage('about')"   id="mnav-about"> Tentang Kami</a>
+  <a onclick="goPage('contact')" id="mnav-contact"> Kontak</a>
   <div class="mobile-menu-sep"></div>
-  <a onclick="openModal();closeMenu()" id="mnav-login"  style="color:var(--primary)">🔐 Masuk / Daftar</a>
-  <a onclick="doLogout();closeMenu()"  id="mnav-logout" style="color:#E29578;display:none">🚪 Keluar</a>
+  <a onclick="openModal();closeMenu()" id="mnav-login"  style="color:var(--primary)"> Masuk / Daftar</a>
+  <a onclick="doLogout();closeMenu()"  id="mnav-logout" style="color:#E29578;display:none"> Keluar</a>
 </div>
 
 <div class="page active" id="page-beranda">
@@ -184,7 +184,7 @@
   <div class="katalog-controls">
     <div class="katalog-controls-inner">
       <div class="search-box">
-        <i class="search-icon">🔍</i>
+        <i></i>
         <input type="text" id="searchInput" placeholder="Cari tempat wisata..." oninput="filterKatalog()">
       </div>
       <div class="filter-pills" id="filterPills">
@@ -200,7 +200,7 @@
   <div class="katalog-body">
     <div class="grid-3" id="katalogGrid"></div>
     <div id="noResult" class="no-result" style="display:none">
-      <div class="no-result-icon">🔍</div>
+      <div></div>
       <p>Tidak ada tempat wisata ditemukan.</p>
     </div>
     <div class="load-more-wrap">
@@ -235,11 +235,11 @@
           </div>
         </div>
         <div class="reviews-section">
-          <h3>⭐ Ulasan Pengunjung</h3>
+          <h3>Ulasan Pengunjung</h3>
           <div id="reviewFormWrap"></div>
           <div class="rev-loading" id="revLoading">Memuat ulasan...</div>
           <div class="reviews-list" id="reviewsList"></div>
-          <div class="rev-empty" id="revEmpty" style="display:none">Belum ada ulasan. Jadilah yang pertama! 🌟</div>
+          <div class="rev-empty" id="revEmpty" style="display:none">Belum ada ulasan. Jadilah yang pertama!</div>
         </div>
       </div>
       <div>
@@ -250,10 +250,10 @@
             <div class="detail-avg-rating" id="dRating"><span>—</span><span>Belum ada ulasan</span></div>
           </div>
           <div class="info-card-body">
-            <div class="info-row"><div class="info-icon">📍</div><div><div class="info-lbl">Lokasi</div><div class="info-val" id="dLokasi"></div></div></div>
-            <div class="info-row"><div class="info-icon">🕐</div><div><div class="info-lbl">Jam Operasional</div><div class="info-val" id="dJam"></div></div></div>
-            <div class="info-row"><div class="info-icon">🎟️</div><div><div class="info-lbl">Harga Tiket</div><div class="info-val" id="dHarga"></div></div></div>
-            <div class="info-row"><div class="info-icon">📞</div><div><div class="info-lbl">Kontak</div><div class="info-val" id="dKontak"></div></div></div>
+            <div class="info-row"><div></div><div><div class="info-lbl">Lokasi</div><div class="info-val" id="dLokasi"></div></div></div>
+            <div class="info-row"><div></div><div><div class="info-lbl">Jam Operasional</div><div class="info-val" id="dJam"></div></div></div>
+            <div class="info-row"><div></div><div><div class="info-lbl">Harga Tiket</div><div class="info-val" id="dHarga"></div></div></div>
+            <div class="info-row"><div></div><div><div class="info-lbl">Kontak</div><div class="info-val" id="dKontak"></div></div></div>
           </div>
         </div>
         <div class="map-wrap"><div id="dMap"></div></div>
@@ -280,12 +280,12 @@
 
     <div class="vm-grid">
       <div class="vm-card">
-        <div class="vm-icon">🎯</div>
+        <div></div>
         <h3>Visi</h3>
         <p>Menjadi platform informasi pariwisata digital terpercaya dan terlengkap untuk Kota Tanjungpinang dan Kabupaten Bintan yang dapat diakses oleh seluruh lapisan masyarakat.</p>
       </div>
       <div class="vm-card misi">
-        <div class="vm-icon">🚀</div>
+        <div></div>
         <h3>Misi</h3>
         <p>Menyajikan informasi destinasi wisata yang akurat, lengkap, dan terkini. Mendukung promosi pariwisata daerah melalui media digital yang modern, responsif, dan mudah digunakan.</p>
       </div>
@@ -330,10 +330,10 @@
     <div class="contact-grid">
       <div class="contact-info">
         <h3>Informasi Kontak</h3>
-        <div class="c-item"><div class="c-icon">📧</div><div><div class="c-lbl">Email</div><div class="c-val">catchypinang@umrah.ac.id</div></div></div>
-        <div class="c-item"><div class="c-icon">📍</div><div><div class="c-lbl">Alamat</div><div class="c-val">Universitas Maritim Raja Ali Haji, Tanjungpinang, Kepulauan Riau</div></div></div>
-        <div class="c-item"><div class="c-icon">📱</div><div><div class="c-lbl">WhatsApp</div><div class="c-val">+62 812-3456-7890</div></div></div>
-        <div class="c-item"><div class="c-icon">🕐</div><div><div class="c-lbl">Jam Respons</div><div class="c-val">Senin–Jumat, 08.00–17.00 WIB</div></div></div>
+        <div class="c-item"><div></div><div><div class="c-lbl">Email</div><div class="c-val">catchypinang@umrah.ac.id</div></div></div>
+        <div class="c-item"><div></div><div><div class="c-lbl">Alamat</div><div class="c-val">Universitas Maritim Raja Ali Haji, Tanjungpinang, Kepulauan Riau</div></div></div>
+        <div class="c-item"><div></div><div><div class="c-lbl">WhatsApp</div><div class="c-val">+62 812-3456-7890</div></div></div>
+        <div class="c-item"><div></div><div><div class="c-lbl">Jam Respons</div><div class="c-val">Senin–Jumat, 08.00–17.00 WIB</div></div></div>
       </div>
       <div class="form-card">
         <h3>Kirim Pesan</h3>
@@ -398,7 +398,7 @@
     </div>
     <div class="footer-bot">
       <p>© 2025 CatchyPinang · Teknik Informatika UMRAH</p>
-      <p>Jelajahi Tanjungpinang dengan CatchyPinang 🌴</p>
+      <p>Jelajahi Tanjungpinang dengan CatchyPinang</p>
     </div>
   </div>
 </footer>
