@@ -3,7 +3,6 @@ let wisata = [
     id: 1,
     nama: "Pulau Penyengat",
     kat: "Sejarah & Budaya",
-    em: "🏛️",
     desk: "Pulau Penyengat adalah pulau kecil bersejarah yang berjarak 2 km dari kota Tanjungpinang. Pulau ini merupakan pusat Kerajaan Riau-Lingga dan menyimpan berbagai peninggalan sejarah budaya Melayu. Yang paling terkenal adalah Masjid Raya Sultan Riau yang konon dibangun menggunakan putih telur sebagai campuran semen.",
     lok: "Pulau Penyengat, Tanjungpinang",
     jam: "Setiap hari, 07.00 – 18.00 WIB",
@@ -22,7 +21,6 @@ let wisata = [
     id: 2,
     nama: "Pantai Trikora",
     kat: "Alam & Pantai",
-    em: "🏖️",
     desk: "Pantai Trikora adalah salah satu pantai terbaik di Pulau Bintan dengan pasir putih halus dan air laut yang jernih berwarna tosca. Berlokasi di Kabupaten Bintan, pantai ini menawarkan keindahan alam yang masih terjaga dan suasana tenang jauh dari keramaian kota.",
     lok: "Km 38, Bintan Timur, Kabupaten Bintan",
     jam: "Setiap hari, 06.00 – 18.00 WIB",
@@ -39,7 +37,6 @@ let wisata = [
     id: 3,
     nama: "Vihara Avalokitesvara Graha",
     kat: "Religi & Spiritual",
-    em: "🛕",
     desk: "Vihara Avalokitesvara Graha adalah vihara terbesar dan paling megah di Tanjungpinang. Arsitektur vihara ini memadukan unsur Tionghoa dan Melayu dengan ornamen khas yang sangat indah. Merupakan tempat ibadah aktif sekaligus destinasi wisata religi yang menarik.",
     lok: "Jl. Harapan, Tanjungpinang",
     jam: "Setiap hari, 06.00 – 20.00 WIB",
@@ -57,7 +54,6 @@ let wisata = [
     id: 4,
     nama: "Gurun Pasir Busung",
     kat: "Alam & Pantai",
-    em: "🏜️",
     desk: "Sebuah fenomena alam unik di Bintan — hamparan pasir kuarsa berwarna putih bersih yang membentuk seperti gurun mini di tepi laut. Tempat ini menjadi daya tarik tersendiri karena jarang ditemukan di wilayah tropis kepulauan. Sangat instagramable dan wajib dikunjungi.",
     lok: "Desa Busung, Seri Kuala Lobam, Bintan",
     jam: "Setiap hari, 07.00 – 17.00 WIB",
@@ -75,7 +71,6 @@ let wisata = [
     id: 5,
     nama: "Kawasan Gurindam Dua Belas",
     kat: "Sejarah & Budaya",
-    em: "📜",
     desk: "Kawasan yang didedikasikan untuk mengenang karya sastra agung Raja Ali Haji, Gurindam Dua Belas. Terdapat tugu dan relief yang menggambarkan 12 pasal gurindam tersebut. Tempat ini juga menjadi simbol kebanggaan budaya Melayu Riau yang telah diakui UNESCO.",
     lok: "Jl. Gurindam, Tanjungpinang Kota",
     jam: "Setiap hari, 08.00 – 17.00 WIB",
@@ -91,7 +86,6 @@ let wisata = [
     id: 6,
     nama: "Lagoi Bay Beach",
     kat: "Alam & Pantai",
-    em: "🌊",
     desk: "Lagoi Bay adalah kawasan pantai premium di Bintan yang dikelilingi resort-resort mewah. Pasir putihnya yang lembut dan ombak yang tenang menjadikan pantai ini ideal untuk berenang, snorkeling, dan berbagai olahraga air. Sunset di sini termasuk yang paling memukau di Kepulauan Riau.",
     lok: "Lagoi, Teluk Sebong, Kabupaten Bintan",
     jam: "Setiap hari, 07.00 – 19.00 WIB",
@@ -109,7 +103,6 @@ let wisata = [
     id: 7,
     nama: "Taman Rekreasi Ocarina",
     kat: "Rekreasi Keluarga",
-    em: "🎡",
     desk: "Taman Ocarina adalah taman rekreasi terbesar di Tanjungpinang yang berlokasi di tepi pantai. Dilengkapi berbagai wahana permainan anak, area jogging, panggung hiburan, dan fasilitas lengkap lainnya. Tempat ideal untuk menghabiskan waktu bersama keluarga pada akhir pekan.",
     lok: "Jl. Ir. Sutami, Tanjungpinang Barat",
     jam: "Selasa–Minggu, 10.00 – 22.00 WIB",
@@ -127,7 +120,6 @@ let wisata = [
     id: 8,
     nama: "Kawasan Kuliner Bintan Center",
     kat: "Kuliner",
-    em: "🦐",
     desk: "Food Court Bintan Center adalah pusat kuliner populer yang terletak di jantung Kota Tanjungpinang. Menawarkan beragam pilihan makanan khas Melayu, Chinese food, hingga jajanan modern dalam satu area yang nyaman dan terjangkau. Tempat favorit warga lokal untuk menikmati makan siang maupun makan malam bersama keluarga.",
     lok: "Bintan Center, Tanjungpinang",
     jam: "Setiap hari, 10.00 – 23.00 WIB",
@@ -144,7 +136,6 @@ let wisata = [
     id: 9,
     nama: "Bintan Agro Beach Resort",
     kat: "Rekreasi Keluarga",
-    em: "🌿",
     desk: "Sebuah resort alam yang memadukan konsep agrowisata dan pantai di Bintan. Pengunjung dapat menikmati perkebunan buah tropis, peternakan, area outbound anak, dan keindahan pantai dalam satu kawasan yang asri. Cocok untuk wisata edukasi keluarga.",
     lok: "Jl. Raya Trikora Km 30, Kabupaten Bintan",
     jam: "Selasa–Minggu, 09.00 – 17.00 WIB",
@@ -162,7 +153,6 @@ let wisata = [
     id: 10,
     nama: "Transtudio Tanjungpinang",
     kat: "Rekreasi Keluarga",
-    em: "🎢",
     desk: "Transtudio Tanjungpinang adalah taman hiburan indoor modern yang menawarkan berbagai wahana seru untuk seluruh keluarga. Dengan berbagai zona permainan bertema dan wahana adrenalin, Transtudio menjadi destinasi hiburan favorit warga Tanjungpinang dan sekitarnya.",
     lok: "Tanjungpinang, Kepulauan Riau",
     jam: "Selasa–Minggu, 10.00 – 21.00 WIB",
@@ -179,7 +169,6 @@ let wisata = [
     id: 11,
     nama: "Telaga Biru",
     kat: "Alam & Pantai",
-    em: "💙",
     desk: "Telaga Biru adalah danau alami dengan air berwarna biru kehijauan yang memukau, terbentuk dari bekas galian tambang bauksit yang kini menjadi destinasi wisata alam unik di Bintan. Warna air yang biru jernih dikelilingi vegetasi hijau menciptakan pemandangan yang sangat fotogenik.",
     lok: "Kabupaten Bintan, Kepulauan Riau",
     jam: "Setiap hari, 07.00 – 17.00 WIB",
@@ -201,21 +190,21 @@ let wisata = [
 const heroSlides = [
   {
     img: "image/penyengat 1.jpeg",
-    badge: "✨ Destinasi Unggulan",
+    badge: "Destinasi Unggulan",
     title: "Pulau Penyengat,<br>Permata Melayu",
     desc: "Jelajahi pulau bersejarah warisan budaya Melayu dan arsitektur megah Kerajaan Riau-Lingga.",
     wisataId: 1  // FIX: id wisata Pulau Penyengat
   },
   {
     img: "image/trikora1.jpeg",
-    badge: "🌊 Wisata Alam",
+    badge: "Wisata Alam",
     title: "Pantai Trikora,<br>Surga Tersembunyi",
     desc: "Rasakan keindahan pantai pasir putih dengan air biru jernih di tepian Pulau Bintan.",
     wisataId: 2  // FIX: id wisata Pantai Trikora
   },
   {
     img: "image/bintan street food 1.jpg",
-    badge: "🍜 Wisata Kuliner",
+    badge: "Wisata Kuliner",
     title: "Cita Rasa Melayu<br>yang Autentik",
     desc: "Nikmati pengalaman kuliner lokal Tanjungpinang kaya akan bumbu dan tradisi turun-temurun.",
     wisataId: 8  // FIX: id wisata Kawasan Kuliner Bincen
@@ -246,7 +235,7 @@ function startWisataListener() {
     if (curPage === "beranda") renderBeranda();
     if (curPage === "detail" && curWisata) {
       const updated = wisata.find(w => w.id === curWisata.id);
-      if (!updated) { backToKatalog(); toast("⚠️ Destinasi ini telah dihapus"); }
+      if (!updated) { backToKatalog(); toast("Destinasi ini telah dihapus"); }
       else { curWisata = updated; }
     }
   });
@@ -370,7 +359,7 @@ function doLogin() {
   curUser = { name: n, email: e };
   localStorage.setItem("cp_user", JSON.stringify(curUser));
   closeModal(); updateAuthUI();
-  toast("Selamat datang, " + n.split(" ")[0] + "! 👋");
+  toast("Selamat datang, " + n.split(" ")[0] + "!");
 }
 
 function doRegister() {
@@ -383,13 +372,13 @@ function doRegister() {
   curUser = { name: n, email: e };
   localStorage.setItem("cp_user", JSON.stringify(curUser));
   closeModal(); updateAuthUI();
-  toast("Akun berhasil dibuat! Selamat datang 🎉");
+  toast("Akun berhasil dibuat! Selamat datang");
 }
 
 function doLogout() {
   localStorage.removeItem("cp_user");
   curUser = null; updateAuthUI();
-  toast("Berhasil keluar. Sampai jumpa! 👋");
+  toast("Berhasil keluar. Sampai jumpa!");
 }
 
 /* ===========================================================
@@ -498,7 +487,7 @@ function buildGallery(fotoArr) {
   galRealCount = fotoArr.length;
 
   if (galRealCount === 0) {
-    track.innerHTML = `<div class="gallery-slide"><span>🌴</span></div>`;
+    track.innerHTML = `<div class="gallery-slide"><span></span></div>`;
     document.getElementById("galCtr").style.display = "none";
     return;
   }
@@ -507,7 +496,7 @@ function buildGallery(fotoArr) {
     const f = fotoArr[0];
     track.innerHTML = `<div class="gallery-slide">${
       isImg(f)
-        ? `<img src="${f}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<span style=\\'font-size:4rem\\'>🌴</span>'">`
+        ? `<img src="${f}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<span style=\\'font-size:4rem\\'></span>'">`
         : `<span>${f}</span>`
     }</div>`;
     document.getElementById("galCtr").style.display = "none";
@@ -519,7 +508,7 @@ function buildGallery(fotoArr) {
   track.innerHTML = all.map(f => `
     <div class="gallery-slide">${
       isImg(f)
-        ? `<img src="${f}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<span style=\\'font-size:4rem\\'>🌴</span>'">`
+        ? `<img src="${f}" alt="" loading="lazy" onerror="this.parentElement.innerHTML='<span style=\\'font-size:4rem\\'></span>'">`
         : `<span>${f}</span>`
     }</div>`).join("");
 
@@ -597,10 +586,10 @@ function thumbHTML(foto, em) {
     return `<div class="card-thumb">
       <img src="${f}" alt="" loading="lazy"
            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <span class="thumb-emoji" style="display:none">${em || "🌴"}</span>
+      <span class="thumb-emoji" style="display:none"></span>
     </div>`;
   }
-  return `<div class="card-thumb"><span class="thumb-emoji">${f || em || "🌴"}</span></div>`;
+  return `<div class="card-thumb"><span class="thumb-emoji"></span></div>`;
 }
 
 function cardHTML(w, prefix = "") {
@@ -615,7 +604,7 @@ function cardHTML(w, prefix = "") {
     <div class="card-foot">
       <div class="card-rating" id="cr-${prefix}${w.id}">${
         avg
-          ? `⭐ ${avg}`
+          ? `${avg}`
           : `<span style="color:var(--muted);font-weight:400;font-size:.78rem">Belum ada ulasan</span>`
       }</div>
       <button class="btn-detail">Lihat Detail</button>
@@ -662,7 +651,7 @@ function renderKatalog() {
   if (isFbReady()) f.slice(0, shown).forEach(w => fbGetAvg(w.id).then(avg => {
     const el = document.getElementById("cr-k-"+w.id);
     if (el) el.innerHTML = avg
-      ? `⭐ ${avg}`
+      ? `${avg}`
       : `<span style="color:var(--muted);font-weight:400;font-size:.78rem">Belum ada ulasan</span>`;
   }));
 }
@@ -670,7 +659,7 @@ function renderKatalog() {
 function filterKatalog()       { searchQ = document.getElementById("searchInput").value; shown = 6; renderKatalog(); }
 function setFilter(cat, el)    { curFilter=cat; shown=6; document.querySelectorAll(".pill").forEach(p=>p.classList.remove("active")); el.classList.add("active"); renderKatalog(); }
 function setFilterByName(cat)  { curFilter=cat; shown=6; document.querySelectorAll(".pill").forEach(p=>p.classList.toggle("active", p.textContent.trim()===cat)); renderKatalog(); }
-function loadMore()            { shown += 6; renderKatalog(); toast("✅ Destinasi tambahan dimuat"); }
+function loadMore()            { shown += 6; renderKatalog(); toast("Destinasi tambahan dimuat"); }
 
 /* ===========================================================
    DETAIL
@@ -697,7 +686,7 @@ function showDetail(id) {
   rEl.innerHTML = "<span>—</span><span>Memuat...</span>";
   if (isFbReady()) fbGetAvg(w.id).then(avg => {
     rEl.innerHTML = avg
-      ? `<span style="color:#FBBF24">⭐ ${avg}</span><span>rata-rata</span>`
+      ? `<span style="color:#FBBF24">${avg}</span><span>rata-rata</span>`
       : "<span>—</span><span>Belum ada ulasan</span>";
   });
 
@@ -720,14 +709,14 @@ function renderRevForm(w) {
   }
   selRating = 0;
   wrap.innerHTML = `<div class="review-form-card">
-    <h4>✍️ Tulis Ulasan, ${curUser.name.split(" ")[0]}</h4>
+    <h4>Tulis Ulasan, ${curUser.name.split(" ")[0]}</h4>
     <div class="star-row" id="starRow">
       <label onclick="setRating(1)">★</label><label onclick="setRating(2)">★</label>
       <label onclick="setRating(3)">★</label><label onclick="setRating(4)">★</label>
       <label onclick="setRating(5)">★</label>
     </div>
     <textarea class="rev-textarea" id="revText" placeholder="Bagikan pengalamanmu mengunjungi ${w.nama}..."></textarea>
-    <button class="btn-submit-rev" onclick="submitReview(${w.id})">Kirim Ulasan 📨</button>
+    <button class="btn-submit-rev" onclick="submitReview(${w.id})">Kirim Ulasan</button>
   </div>`;
 }
 
@@ -738,9 +727,9 @@ function setRating(v) {
 
 async function submitReview(wisataId) {
   if (!curUser) { openModal(); return; }
-  if (!selRating) { toast("⚠️ Pilih rating bintang terlebih dahulu"); return; }
+  if (!selRating) { toast("Pilih rating bintang terlebih dahulu"); return; }
   const text = document.getElementById("revText").value.trim();
-  if (!text) { toast("⚠️ Tulis ulasanmu terlebih dahulu"); return; }
+  if (!text) { toast("Tulis ulasanmu terlebih dahulu"); return; }
   const rev = {
     name: curUser.name, email: curUser.email, rating: selRating, text,
     date: new Date().toLocaleDateString("id-ID", { day:"numeric", month:"long", year:"numeric" })
@@ -751,7 +740,7 @@ async function submitReview(wisataId) {
   } else {
     lsSaveReview(wisataId, rev);
   }
-  toast("✅ Ulasan berhasil dikirim! Terima kasih 🙏");
+  toast("Ulasan berhasil dikirim! Terima kasih");
   renderRevForm(curWisata);
   if (!isFbReady()) loadRevsList(wisataId);
 }
@@ -807,7 +796,7 @@ async function submitContact() {
   document.getElementById("ecNama").classList.toggle("show", !n);  if (!n) ok = false;
   document.getElementById("ecEmail").classList.toggle("show", !validEmail(e)); if (!validEmail(e)) ok = false;
   document.getElementById("ecPesan").classList.toggle("show", !p); if (!p) ok = false;
-  if (!ok) { toast("⚠️ Lengkapi semua field wajib"); return; }
+  if (!ok) { toast("Lengkapi semua field wajib"); return; }
 
   const btn = document.getElementById("btnSend");
   btn.disabled = true; btn.textContent = "Mengirim...";
@@ -825,11 +814,11 @@ async function submitContact() {
   if (saved || !isFbReady()) {
     ["cNama","cEmail","cTopik","cPesan"].forEach(id => document.getElementById(id).value = "");
     toast(isFbReady()
-      ? "✅ Pesan terkirim ke database! Kami akan membalas segera."
-      : "✅ Pesan terkirim! Kami akan membalas dalam 1×24 jam"
+      ? "Pesan terkirim ke database! Kami akan membalas segera."
+      : "Pesan terkirim! Kami akan membalas dalam 1×24 jam"
     );
   } else {
-    toast("❌ Gagal mengirim pesan. Periksa koneksi internet.");
+    toast("Gagal mengirim pesan. Periksa koneksi internet.");
   }
 }
 
