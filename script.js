@@ -758,7 +758,7 @@ function loadRevsList(wisataId) {
       empty.style.display = "none";
       list.innerHTML = reviews.map(revHTML).join("");
       const avg = (reviews.reduce((s,x) => s+x.rating, 0) / reviews.length).toFixed(1);
-      document.getElementById("dRating").innerHTML = `<span style="color:#FBBF24">⭐ ${avg}</span><span>(${reviews.length} ulasan)</span>`;
+      document.getElementById("dRating").innerHTML = `<span style="color:#FBBF24"> ${avg}</span><span>(${reviews.length} ulasan)</span>`;
     });
   } else {
     loading.style.display = "none";
@@ -767,7 +767,7 @@ function loadRevsList(wisataId) {
     empty.style.display = "none";
     list.innerHTML = reviews.map(revHTML).join("");
     const avg = lsAvg(wisataId);
-    if (avg) document.getElementById("dRating").innerHTML = `<span style="color:#FBBF24">⭐ ${avg}</span><span>(${reviews.length} ulasan)</span>`;
+    if (avg) document.getElementById("dRating").innerHTML = `<span style="color:#FBBF24"> ${avg}</span><span>(${reviews.length} ulasan)</span>`;
   }
 }
 
@@ -809,7 +809,7 @@ async function submitContact() {
   let saved = false;
   if (isFbReady()) saved = await fbSaveContact(data);
 
-  btn.disabled = false; btn.textContent = "Kirim Pesan 📨";
+  btn.disabled = false; btn.textContent = "Kirim Pesan";
 
   if (saved || !isFbReady()) {
     ["cNama","cEmail","cTopik","cPesan"].forEach(id => document.getElementById(id).value = "");
